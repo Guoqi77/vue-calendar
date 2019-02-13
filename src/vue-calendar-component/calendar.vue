@@ -124,8 +124,8 @@ wh_content_item_tag {
   color: #bfbfbf;
 }
 .wh_content_item .wh_isToday {
-  background: yellow;
-  border-radius: 100px;
+  /* background: yellow;
+  border-radius: 100px; */
 }
 .wh_content_item .wh_chose_day {
   background: green;
@@ -154,7 +154,7 @@ wh_content_item_tag {
           <div
             class="wh_item_date"
             v-bind:class="[{ wh_isMark: item.isMark},{wh_other_dayhide:item.otherMonth!=='nowMonth'},{wh_want_dayhide:item.dayHide},{wh_isToday:item.isToday},{wh_chose_day:item.chooseDay},setClass(item)]"
-          >{{item.id}}</div>
+          >{{item.isToday ? '今' : item.id}}</div>
         </div>
       </div>
     </div>
